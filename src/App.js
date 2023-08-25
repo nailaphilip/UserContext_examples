@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+// import { useState } from "react";
+// import PropTest from "./PropTest";
+import "./App.css";
+// import NameCheckTest from "./NameCheckTest";
+import CompA from "./CompA";
+import GlobalContextProvider from "./GlobalContext";
+
+const info = "Totally different info";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalContextProvider>
+      <div className="App">
+        <CompA info={info} />
+      </div>
+    </GlobalContextProvider>
   );
 }
 
